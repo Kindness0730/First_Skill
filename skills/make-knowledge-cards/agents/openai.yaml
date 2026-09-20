@@ -1,0 +1,38 @@
+name: make-knowledge-cards
+version: 1.0.0
+description: 将文章/Markdown/TXT转换为结构化知识卡片的开源Skill
+license: MIT
+author: open-source
+
+triggers:
+  - 制作知识卡片
+  - 文章提炼要点
+  - 长文转卡片
+  - 读书笔记整理
+  - 知识点总结
+
+capabilities:
+  - 文本内容提取
+  - 知识点提炼
+  - 结构化卡片生成
+
+input:
+  type: [text, file]
+  file_formats: [md, txt]
+  max_length: 100000
+
+output:
+  format: markdown
+  card_count: 5-8
+  card_structure:
+    - title
+    - core_knowledge
+    - explanation
+    - example_or_question
+
+limitations:
+  - 不支持网页抓取
+  - 不支持PDF文件处理
+  - 不支持Anki格式导出
+  - 不提供图形界面
+  - 不编造原文不存在的信息
